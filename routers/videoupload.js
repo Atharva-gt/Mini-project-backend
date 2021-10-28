@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Model = require('../models/videoModel');
+const Model = require('../models/videomodel');
 
 
 router.post('/add', (req, res) => {
