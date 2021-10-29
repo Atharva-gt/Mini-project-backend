@@ -27,7 +27,7 @@ app.use("/file", videoupload);
 
 app.get("/", (req, res) => {
   console.log("request from client!!");
-  res.send("you got a response");
+  res.send("Server Online!");
 });
 
 app.get("/add", (req, res) => {
