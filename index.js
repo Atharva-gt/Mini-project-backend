@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 const userRouter = require("./routers/userRouter");
 const fileRouter = require("./routers/fileRouter");
 const videoupload = require("./routers/videoupload");
