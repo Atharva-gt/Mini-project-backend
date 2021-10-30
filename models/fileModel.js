@@ -6,6 +6,6 @@ const schema = new mongoose.Schema({
   user: { type: mongoose.Types.ObjectId, ref: "users" },
 });
 
-const model = mongoose.model("files", schema);
+const model = mongoose.model("file", schema);
 
 module.exports = model;

@@ -6,7 +6,7 @@ const fileRouter = require("./routers/fileRouter");
 const videoupload = require("./routers/videoupload");
 const cors = require("cors");
 
-app.use(cors({ origin: ["https://fileshare-frontend1.herokuapp.com"] }));
+app.use(cors({ origin: ["https://fileshare-frontend1.herokuapp.com","http://localhost:3000"] }));
 app.use(express.json());
 app.use(express.static("./uploads"));
 app.use("/user", userRouter);
