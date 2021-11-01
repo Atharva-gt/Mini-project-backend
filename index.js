@@ -3,17 +3,21 @@ const app = express();
 const port = process.env.PORT || 5000;
 const userRouter = require("./routers/userRouter");
 const fileRouter = require("./routers/fileRouter");
-const videoupload = require("./routers/videoupload");
 const cors = require("cors");
 const util = require("./routers/util");
 
-
-app.use(cors({ origin: ["https://fileshare-frontend1.herokuapp.com","http://localhost:3000"] }));
+app.use(
+  cors({
+    origin: [
+      "https://fileshare-frontend1.herokuapp.com",
+      "http://localhost:3000",
+    ],
+  })
+);
 app.use(express.json());
 app.use(express.static("./uploads"));
 app.use("/user", userRouter);
-app.use("/share", fileRouter);
-app.use("/file", videoupload);
+app.use("/file", fileRouter);
 app.use("/util", util);
 
 app.get("/", (req, res) => {
