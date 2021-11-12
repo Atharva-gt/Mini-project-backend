@@ -5,6 +5,7 @@ const userRouter = require("./routers/userRouter");
 const fileRouter = require("./routers/fileRouter");
 const cors = require("cors");
 const util = require("./routers/util");
+const { request } = require("express");
 
 app.use(
   cors({
@@ -23,6 +24,11 @@ app.use("/util", util);
 app.get("/", (req, res) => {
   console.log("request from client!!");
   res.send("Server Online!");
+});
+
+app.get('/download/:filename', function(req, res){
+  const file = `${__dirname}/uploads/${req.params.filename}`;
+  res.download(file); // Set disposition and send it.
 });
 
 app.get("/add", (req, res) => {
