@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 
 app.get('/download/:filename', function(req, res){
   const file = `${__dirname}/uploads/${req.params.filename}`;
-  res.download(file); // Set disposition and send it.
+  res.download(file); 
 });
 
 app.get("/add", (req, res) => {
