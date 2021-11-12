@@ -10,7 +10,7 @@ const { request } = require("express");
 app.use(
   cors({
     origin: [
-      "https://fileshare-frontend1.herokuapp.com",
+      "https://fileshare-frontend1.herokuapp.com/",
       "http://localhost:3000",
     ],
   })
